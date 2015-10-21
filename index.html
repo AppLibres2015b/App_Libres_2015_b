@@ -6,16 +6,23 @@
     <link rel="stylesheet" href="Estilos/misEstilos.css">
 
     <link rel="stylesheet" href="Estilos/animate.css">
-
+    
     <script src="Javascript/wow.js"></script>
-
     <script>
         new WOW().init();
     </script>
 
+    
+    
+
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-
+    
+    
+<script src="Javascript/angular-ui-router.js"></script>
+    
+    
     <script src="https://code.angularjs.org/1.4.7/angular-animate.js"></script>
 
     <script src="Javascript/app.js"></script>
@@ -23,7 +30,22 @@
 </head>
 
 <body ng-app='angular'>
-
+    <h1>UI Router Angular</h1>
+    <p>ui-view</p>
+    <div ui-view></div>
+    <!-- We'll also add some navigation: -->
+    <a ui-sref="state1">State 1</a>
+    <a ui-sref="state2">State 2</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="animated wow tada">
         <h1>Ejemplo con angular</h1>
 
