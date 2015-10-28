@@ -1,4 +1,3 @@
-
 //var number = 1;
 //Comentario de Una linea
 /*
@@ -29,53 +28,65 @@ while(number<=5){
 //}
 //
 //
-//function sumaCubos (a,b){
-//    return (a*a*a)+(b*b*b);
-//}
+var sumarCubosFn = function sumaCubos(a, b) {
+    return (a * a * a) + (b * b * b);
+};
+
 //
 //var suma = sumaCubos(4,2);
 //
 //console.log(suma);
 
-var amigos = ["Zeus","Thor","Isis","Gaia","Jesus"];
+var amigos = ["Zeus", "Thor", "Isis", "Gaia", "Jesus", 26, true, false, undefined, sumarCubosFn];
+console.log(amigos);
+console.log(amigos[9](1, 2));
 
-//console.log(amigos);
+
 
 var datos = {
-    nombre:"Adrian",
-    apellido:"Eguez",
-    desplegarNombre: function(){
-        console.log(datos.nombre+" "+this.apellido);
+    nombre: "Adrian",
+    apellido: "Eguez",
+    desplegarNombre: function () {
+        console.log(datos.nombre + " " + this.apellido);
+        return datos.nombre + " " + this.apellido;
     }
 }
 
-console.log(datos.nombre);
-console.log(datos.apellido);
-console.log(datos.desplegarNombre());
+
+function getValue() {
+    var x = document.getElementById("Nombre").innerHTML= datos.desplegarNombre();
+
+}
 
 
 
-console.log(typeof amigos);
-
-console.log(amigos);
-
-console.log(typeof datos);
-
-
-console.log(datos);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//console.log(datos.nombre);
+//console.log(datos.apellido);
+//console.log(datos.desplegarNombre());
+//
+//
+//
+//console.log(typeof amigos);
+//
+//console.log(amigos);
+//
+//console.log(typeof datos);
+//
+//
+//console.log(datos);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
