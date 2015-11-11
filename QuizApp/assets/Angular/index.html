@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="app.js"></script>
+        
+</head>
+    <body ng-app="Usuarios" ng-controller="Usuario">
+            <div ng-repeat="variableDeUnUsuario in usuarios">
+                <!-- ESTAMOS CON LOS DATOS DEL USUARIO --> 
+                <h1>nombre: {{ variableDeUnUsuario.nombre  }}</h1>
+                <p>password: {{ variableDeUnUsuario.password}}</p>
+                <p>id: {{ variableDeUnUsuario.id}}</p>
+                <p>actualizado: {{ variableDeUnUsuario.updatedAt}}</p>
+                <p>creado:{{ variableDeUnUsuario.createdAt}}</p>
+                
+                <!-- ESTAMOS CON LOS DATOS DEL USUARIO DENTRO DE LA COLECCION --> 
+                <h1>Lista de Pruebas del Usuario</h1>
+                <ul>
+                    <li ng-repeat="pruebaDelUsuario in variableDeUnUsuario.pruebasColeccion"> {{ pruebaDelUsuario.nombre }}
+                    </li>
+                </ul>
+                <h1>Pruebas en un combo</h1>
+                <h2>Usted selecciono : {{seleccionado}}</h2>
+                <select ng-options="item.id as item.nombre for item in variableDeUnUsuario.pruebasColeccion  track by item.id" ng-model="seleccionado"></select>           
+                 
+                
+                <h1>Pruebas con header 2</h1>
+                <h2 ng-repeat="pruebaDelUsuario in variableDeUnUsuario.pruebasColeccion">{{ pruebaDelUsuario.nombre }} 
+                    <button>Button</button>
+                    <img src="https://avatars1.githubusercontent.com/u/5687655?v=3&s=460">
+                </h2>
+                
+            </div>
+    </body>
+</html>
+    
+
+
+
+
+
+
+
+
+
+
+
