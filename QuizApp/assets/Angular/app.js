@@ -11,11 +11,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/",
             templateUrl: "rutas/Home.html",
             controller: 'HomeController'
-        }).state('usuarios', {
+        })
+        .state('usuarios', {
             url: "/Usuarios",
             templateUrl: "rutas/Usuarios.html",
             controller: 'UsuariosController'
-        }).state('cuenta', {
+        })
+        .state('cuenta', {
             url: "/Cuenta",
             templateUrl: "rutas/CuentaUsuario.html",
             controller: 'CuentaController'
