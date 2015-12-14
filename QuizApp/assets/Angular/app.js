@@ -2,9 +2,9 @@ var app = angular.module('AplicacionPruebas', ['ui.router']);
 
 
 app.config(function ($stateProvider, $urlRouterProvider) {
-    
-    
-//$urlRouterProvider.otherwise("/");
+
+
+    //$urlRouterProvider.otherwise("/");
 
     $stateProvider
         .state('home', {
@@ -17,13 +17,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "rutas/Usuarios.html",
             controller: 'UsuariosController'
         })
+        .state('editarusuario', {
+            url: "/editarusuario/:idUsuario",
+            templateUrl: "rutas/EditarUsuarios.html",
+            controller: 'EditarUsuarioController'
+        })
         .state('cuenta', {
             url: "/Cuenta",
             templateUrl: "rutas/CuentaUsuario.html",
             controller: 'CuentaController'
         });
-    
+
 
 
 });
-

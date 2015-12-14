@@ -37,11 +37,23 @@ app.controller('UsuariosController', ['$scope', "$http", function ($scope, $http
                 apellido: $scope.apellido,
                 password: $scope.password,
                 correo: $scope.correo,
-                fecha: $scope.fecha
+                fecha: $scope.fecha,
+                imagen: $scope.imagen
             }
         }).then(
             function exitoEnElGuardado(respuesta) {
                 console.log(respuesta);
+                
+                
+                $scope.nombre="";
+                $scope.apellido="";
+                $scope.password="";
+                $scope.correo="";
+                $scope.fecha="";
+                $scope.imagen="";
+                
+                
+                
             },
             function falloEnElGuardado(error) {
                 console.log(error);
