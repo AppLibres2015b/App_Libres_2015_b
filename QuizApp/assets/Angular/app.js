@@ -1,6 +1,6 @@
-var app = angular.module('AplicacionPruebas', ['ui.router']);
+var app = angular.module('AplicacionPruebas', ['ui.router','ngResource']);
 
-
+angular
 app.config(function ($stateProvider, $urlRouterProvider) {
 
 

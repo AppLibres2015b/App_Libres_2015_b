@@ -1,4 +1,4 @@
-app.controller('EditarUsuarioController', ['$scope', "$http",'$stateParams', function ($scope, $http, $stateParams) {
+app.controller('EditarUsuarioController', ['$scope', "$http",'$stateParams','PruebasFactory', function ($scope, $http, $stateParams, PruebasFactory) {
 
     console.log("Entro a Editar usuario");
     console.log($stateParams.idUsuario);
@@ -14,7 +14,31 @@ app.controller('EditarUsuarioController', ['$scope', "$http",'$stateParams', fun
         function falloEnElGuardado(error) {
             console.log(error);
         });
+
+   
+    
+    PruebasFactory.query()
+    .$promise.then(
+        function llegaron(respuesta)
+        {
+            console.log(respuesta);
+        },
+        function Errores(error)
+        {
+            console.log(error);
+        });
     
     
     
 }]);
+
+
+
+
+
+
+
+
+
+
+
