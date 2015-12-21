@@ -41,4 +41,38 @@
             <button type="submit" class="btn btn-primary">Registrar Nuevo Usuario</button>
         </form>
     </div>
+    <div class="row">
+        <form class="col-sm-4">
+            <h1>Crear Pruebas</h1>
+            <div class="form-group">
+                <label for="fechaNacUsuario">Nombre:</label>
+                <input ng-model="nuevaPrueba.nombre" type="text" class="form-control" id="fechaNacUsuario" placeholder="Nombre Prueba">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar Nueva Prueba</button>
+
+        </form>
+    </div>
+
+    <div class="row">
+        <h1>Lista de  Pruebas</h1>
+        <div class="col-sm-4" ng-repeat="prueba in pruebas">
+
+            <h3>{{prueba.nombre}}</h3>
+            <button class="btn btn-success"> Editar </button>
+            <button class="btn btn-danger"> Borrar </button>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
 </div>

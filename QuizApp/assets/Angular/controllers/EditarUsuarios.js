@@ -17,11 +17,29 @@ app.controller('EditarUsuarioController', ['$scope', "$http",'$stateParams','Pru
 
    
     
-    PruebasFactory.query()
+    PruebasFactory.busqueda({
+        idUsuario:$stateParams.idUsuario
+    })
     .$promise.then(
         function llegaron(respuesta)
         {
             console.log(respuesta);
+            $scope.pruebas = respuesta;
+        },
+        function Errores(error)
+        {
+            console.log(error);
+        });
+    
+    
+    PruebasFactory.save({
+        nombre: $scope.nuevaPrueba.nombre
+    })
+    .$promise.then(
+        function llegaron(respuesta)
+        {
+            console.log(respuesta);
+            $scope.pruebas.push(respuesta);
         },
         function Errores(error)
         {
