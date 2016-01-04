@@ -2,7 +2,11 @@ app.controller('EditarUsuarioController', ['$scope', "$http", '$stateParams', 'P
 
     console.log("Entro a Editar usuario");
     console.log($stateParams.idUsuario);
-
+    ///////////////////////////////////
+    $scope.pruebas = [];
+    ///////////////////////////////////
+    
+    
     $http({
         method: 'GET',
         url: 'http://localhost:1337/Usuarios/' + $stateParams.idUsuario

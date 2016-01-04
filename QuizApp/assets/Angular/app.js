@@ -1,6 +1,6 @@
-var app = angular.module('AplicacionPruebas', ['ui.router','ngResource']);
+var app = angular.module('AplicacionPruebas', ['ui.router', 'ngResource']);
 
-        
+
 app.config(function ($stateProvider, $urlRouterProvider) {
 
 
@@ -21,6 +21,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/editarusuario/:idUsuario",
             templateUrl: "rutas/EditarUsuarios.html",
             controller: 'EditarUsuarioController'
+        })
+        .state('editarprueba', {
+            url: "/editarprueba/:idPrueba",
+            templateUrl: "rutas/EditarPrueba.html",
+            controller: 'EditarPruebaController'
         })
         .state('cuenta', {
             url: "/Cuenta",

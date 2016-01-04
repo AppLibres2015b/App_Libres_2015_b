@@ -42,7 +42,7 @@
         </form>
     </div>
     <div class="row">
-        <form class="col-sm-4">
+        <form class="col-sm-4" ng-submit="guardarPrueba()">
             <h1>Crear Pruebas</h1>
             <div class="form-group">
                 <label for="fechaNacUsuario">Nombre:</label>
@@ -59,7 +59,7 @@
         <div class="col-sm-4" ng-repeat="prueba in pruebas">
 
             <h3>{{prueba.nombre}}</h3>
-            <button class="btn btn-success"> Editar </button>
+            <a class="btn btn-success" href="#/editarprueba/{{prueba.id}}"> Editar </a>
             <button class="btn btn-danger"> Borrar </button>
 
 
